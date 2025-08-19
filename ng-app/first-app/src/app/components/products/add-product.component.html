@@ -1,0 +1,24 @@
+
+  <div class="container"> 
+    <div class="add-product-form">
+  <h2>Add Product</h2>
+  <form (submit)="onSubmit(); $event.preventDefault()">
+    <label>Name:
+      <input name="name" [value]="product.name" (input)="product.name =  $any($event.target).value" required />
+    </label><br />
+    <label>Image:
+      <input name="image" [value]="product.image" (input)="product.image =  $any($event.target).value" required />
+    </label><br />
+    <label>Price:
+      <input type="number" name="price" [value]="product.price" (input)="product.price = + $any($event.target).value" required />
+    </label><br />
+    <label>Color:
+      <input name="color" [value]="product.color" (input)="product.color =  $any($event.target).value" required />
+    </label><br />
+    <div class="center-btn">
+    <button type="submit">Add</button>
+    </div>
+  </form>
+</div>
+</div>
+

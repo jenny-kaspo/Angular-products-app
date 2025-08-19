@@ -1,0 +1,17 @@
+
+.product-details {
+    width: 50%; 
+    height: 400px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    text-align: center;
+    position: absolute;
+    left: 200px;
+    top: 180px;
+  }
+  
+  .product-details img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }

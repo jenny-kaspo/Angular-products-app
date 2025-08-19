@@ -1,0 +1,17 @@
+header{
+    display: flex;
+    padding-inline: 50px;
+    padding-block: 8px;
+    background-color: black;
+    color: aliceblue;
+    }
+
+    nav{
+        display: flex;
+        gap: 16px;
+        position: absolute;
+        right: 50px;
+    }
+    a{
+        color: white;
+    }

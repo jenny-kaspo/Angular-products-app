@@ -1,0 +1,41 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h2{
+    color: #ff3c00;
+    padding: 10px;}
+
+.add-product-form {
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+ width: 250px; 
+ height: 300px;
+  padding: 100px;
+  margin: 50px;
+  background: #f9f9f9;
+  
+}
+.add-product-form input{
+width: 250px;
+height: 18px;
+margin: 10px;
+margin-top: 8px;
+}
+.center-btn {
+  display: flex;
+  justify-content: center;
+padding-top: 50px;
+}
+
+.center-btn button {
+    width: 60px;
+    height: 40px;
+  background: #ff3c00;
+  color: #fff;
+  
+}

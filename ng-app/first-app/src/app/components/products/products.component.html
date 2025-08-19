@@ -1,0 +1,40 @@
+<div class="container">
+
+  <div class="product-list">
+    <div *ngFor="let item of products$ | async" class="product-card">
+      <img [src]="item.image" alt="{{ item.name }}">
+      <h3>{{ item.name }}</h3>
+      <button (click)="onEdit(item); $event.stopPropagation()">Edit</button>
+      <button (click)="onDelete(item.id); $event.stopPropagation()">Delete</button>
+      <button (click)="viewDetails(item); $event.stopPropagation()">View</button>
+    </div>
+  </div>
+
+  <div class="edit-form" *ngIf="editMode">
+    <h2>Edit Product</h2>
+
+    <form (submit)="onEditSave(); $event.preventDefault()">
+      <label>Name:
+        <input name="name" [value]="selectedItem.name" (input)="selectedItem.name = $any($event.target).value" required />
+      </label><br />
+
+      <label>Image:
+        <input name="image" [value]="selectedItem.image" (input)="selectedItem.image = $any($event.target).value" required />
+      </label><br />
+
+      <label>Price:
+        <input type="number" name="price" [value]="selectedItem.price" (input)="selectedItem.price = +$any($event.target).value" required />
+      </label><br />
+
+      <label>Color:
+        <input name="color" [value]="selectedItem.color" (input)="selectedItem.color = $any($event.target).value" required />
+      </label><br />
+
+      <div class="center-btn">
+        <button type="submit">Save</button>
+        <button type="button" (click)="onEditCancel()">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+</div>
