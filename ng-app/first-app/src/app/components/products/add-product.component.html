@@ -13,7 +13,7 @@
       <input type="number" name="price" [value]="product.price" (input)="product.price = + $any($event.target).value" required />
     </label><br />
     <label>Color:
-      <input name="color" [value]="product.color" (input)="product.color =  $any($event.target).value" required />
+      <input name="color" [value]="product.colors" (input)="product.colors =  $any($event.target).value" required />
     </label><br />
     <div class="center-btn">
     <button type="submit">Add</button>

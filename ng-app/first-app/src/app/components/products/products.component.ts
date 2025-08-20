@@ -7,7 +7,6 @@ import { NgFor, NgIf,AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'app-products',
-  standalone: true,
   imports:[NgFor,NgIf,AsyncPipe],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
@@ -15,7 +14,7 @@ import { NgFor, NgIf,AsyncPipe } from '@angular/common';
 
 export class ProductsComponent implements OnInit {
   products$!: Observable<any[]>;
-  selectedItem: any = null;
+  selectedItem: any;
   editMode = false;
 
   constructor(private productsService: ProductsService, private router: Router) {}

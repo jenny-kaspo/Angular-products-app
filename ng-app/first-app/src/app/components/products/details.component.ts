@@ -9,7 +9,7 @@ import { NgIf } from '@angular/common';
   styleUrl: './details.component.css'
 })
 export class DetailsComponent implements OnInit {
-  product: any;
+  product: any=null;
 
   constructor(public productsService: ProductsService) {}
 
