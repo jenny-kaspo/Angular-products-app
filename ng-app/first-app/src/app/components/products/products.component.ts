@@ -14,8 +14,8 @@ import { NgFor, NgIf,AsyncPipe } from '@angular/common';
 
 export class ProductsComponent implements OnInit {
   products$!: Observable<any[]>;
-  selectedItem: any;
-  editMode = false;
+  selectedItem: any=null;
+  editMode:boolean = false;
 
   constructor(private productsService: ProductsService, private router: Router) {}
 
